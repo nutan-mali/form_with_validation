@@ -4,7 +4,7 @@ from wtforms import StringField, PasswordField
 from wtforms.validators import InputRequired, Email, Length, Regexp
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SECRET_KEY'] = 'unique_secret_key'
 
 class LeadForm(FlaskForm):
     name = StringField('Name', validators=[InputRequired(), Regexp(r'^[a-zA-Z]+$', message='Only alphabets allowed')])
